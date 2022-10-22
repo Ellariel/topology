@@ -18,8 +18,8 @@ def timemachine():
 @timemachine.command()
 @click.argument("dataset", type=DatasetFile())
 @click.argument("timestamp", type=int, required=False)
-@click.option('--fmt', type=click.Choice(['dot', 'gml', 'graphml', 'json'], case_sensitive=False))
-def restore(dataset, timestamp=None, fmt='dot'):
+@click.option('--fmt', type=click.Choice(['dot', 'gml', 'graphml', 'json', 'g'], case_sensitive=False))
+def restore(dataset, timestamp=None, fmt='g'):
     """Restore reconstructs the network topology at a specific time in the past.
 
     Restore replays gossip messages from a dataset and reconstructs
@@ -152,3 +152,6 @@ def restore(dataset, timestamp=None, fmt='dot'):
 
     elif fmt == 'json':
         print(json.dumps(json_graph.adjacency_data(g)))
+    
+    elif fmt == 'g':
+        return g
