@@ -1,7 +1,7 @@
 import click
 import bz2
 from pyln.proto.primitives import varint_decode
-from lntopo.parser import parse
+from .parser import parse
 from pathlib import Path
 import struct
 
