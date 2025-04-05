@@ -8,9 +8,9 @@ authors = ["Christian Decker <decker.christian@gmail.com>"]
 python = "^3.8"
 click = "7.1.2"
 pyln-proto = "^0.10"
-networkx = "^2.5"
-tqdm = "^4.50"
-pydot = "^1.4.2"
+tqdm
+networkx
+pydot
 
 [tool.poetry.dev-dependencies]
 
